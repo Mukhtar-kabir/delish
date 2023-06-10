@@ -19,8 +19,8 @@ html {
 }
 
 section {
-  /* padding: 2rem 9%; */
-  padding: 2rem 5.2%;
+  padding: 2rem 9%;
+  /* padding: 2rem 5.2%; */
 }
 
 .btn {
@@ -252,6 +252,7 @@ header .icons #menu-bars {
   gap: 2rem;
   padding-top: 7rem;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .home .home-slider .slide .content {
