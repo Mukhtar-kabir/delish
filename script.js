@@ -2,6 +2,7 @@
 
 const menu = document.querySelector('#menu-bars');
 const navbar = document.querySelector('.navbar');
+const navLink = document.querySelector('.nav--link');
 
 menu.onclick = () => {
   menu.classList.toggle('fa-times');
@@ -15,6 +16,27 @@ document.querySelector('#search-icon').onclick = () => {
 document.querySelector('#close').onclick = () => {
   document.querySelector('#search-form').classList.remove('active');
 };
+
+document.querySelectorAll('.nav--link').forEach((el) =>
+  el.addEventListener('click', () => {
+    menu.classList.remove('active');
+    navbar.classList.remove('active');
+    menu.classList.remove('fa-times');
+  })
+);
+
+const scrollView = function () {
+  navLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    console.log('LINK');
+
+    if (e.target.classList.contains('nav--link')) {
+      const id = e.target.getAttribute('href');
+      document.querySelector(id).scrollIntoView({ behaviour: 'smooth' });
+    }
+  });
+};
+scrollView();
 
 var swiper = new Swiper('.home-slider', {
   spaceBetween: 30,
@@ -53,3 +75,13 @@ var swiper = new Swiper('.review-slider', {
     },
   },
 });
+
+function loader() {
+  document.querySelector('.loader-container').classList.add('fade-out')
+}
+
+function fadeOut() {
+  setInterval(loader, 3000)
+}
+
+window.onload = fadeOut;

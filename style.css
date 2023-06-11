@@ -645,7 +645,7 @@ header .icons #menu-bars {
   }
 
   .menu .box-container .box .content p {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 
   .menu .box-container .box .content .price {
@@ -799,6 +799,7 @@ header .icons #menu-bars {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
+  padding: 50px 0;
 }
 
 .footer .box-container .box h3 {
@@ -829,6 +830,11 @@ header .icons #menu-bars {
   margin-top: 1.5rem;
 }
 
+.footer .credit a {
+  text-transform: lowercase;
+  text-decoration: underline;
+}
+
 @media (max-width: 900px) {
   .footer .box-container .box h3 {
     font-size: 2rem;
@@ -841,4 +847,27 @@ header .icons #menu-bars {
   .footer .credit {
     font-size: 1.3rem;
   }
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loader-container img {
+  width: 35rem;
+}
+
+.loader-container.fade-out {
+  top: 110%;
+  opacity: 0;
 }
