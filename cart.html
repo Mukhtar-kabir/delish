@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delish</title>
+    <link rel="icon" href="./src/logo.PNG" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="dist/data.js"></script>
+    <script defer src="dist/cart.js"></script>
+    <script defer src="dist/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">
+        <img src="./src/logo.PNG" alt="LOGO" />
+        <h1>Delish</h1>
+      </a>
+
+      <nav class="navbar">
+        <a class="nav--link active" href="index.html">Home</a>
+        <a href="#dishes" class="nav--link">Dishes</a>
+        <a href="#about" class="nav--link">about</a>
+        <a href="#menu" class="nav--link">menu</a>
+        <a href="#review" class="nav--link">review</a>
+        <a href="#order" class="nav--link">order</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-search" id="search-icon"></i>
+        <a href="#" class="fas fa-heart"></a>
+        <a href="" class="fas fa-shopping-cart"><span class="notify">0</span></a>
+        <i class="fas fa-bars" id="menu-bars"></i>
+      </div>
+    </header>
+
+    <form action="" id="search-form">
+      <input
+        type="search"
+        placeholder="search here..."
+        name=""
+        id="search-box"
+      />
+      <label for="search-box" class="fa fa-search"></label>
+      <i class="fa fa-times" id="close"></i>
+    </form>
+
+    <section class="add-to-cart" id="add-to-cart">
+      <div class="add-heading--cart">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+          />
+        </svg>
+        <h3>my cart</h3>
+      </div>
+
+      <div class="box-container">
+        <div class="box">
+          <div class="box-item--heading">
+            <h3>items</h3>
+            <h3>quantity</h3>
+            <h3>price</h3>
+          </div>
+          
+          <div class="shopping-cart">
+            <!-- <div class="container">
+              <div class="shopping--cart-boxes">
+                <div class="shopping--cart-box">
+                  <img src="./src/pic-1.PNG" alt="">
+                  <h3>burger</h3>
+                </div>
+  
+                <div class="shopping--cart-box">
+                  <div class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>                  
+          
+                    <h3 class="quantity">0</h3>
+          
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>                  
+                  </div>
+                </div>
+  
+                <div class="shopping--cart-box">
+                  <div class="prices">
+                    <h3>$5</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                    </svg>                  
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+          <div class="label" id="text"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>locations</h3>
+          <a href="#">Nigeria</a>
+          <a href="#">Ghana</a>
+          <a href="#">Libya</a>
+          <a href="#">Togo</a>
+          <a href="#">Camero</a>
+          <a href="#">Mali</a>
+        </div>
+
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#">home</a>
+          <a href="#">dishes</a>
+          <a href="#">about</a>
+          <a href="#">menu</a>
+          <a href="#">review</a>
+          <a href="#">order</a>
+        </div>
+
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#">+234-813-183-9432</a>
+          <a href="#">+245-678-6878</a>
+          <a href="#">delish@gmail.com</a>
+          <a href="#">Lagos, Nigeria - 53698</a>
+        </div>
+
+        <div class="box">
+          <h3>follow us</h3>
+          <a href="#">facebook</a>
+          <a href="#">twitter</a>
+          <a href="#">instagram</a>
+          <a href="#">linkedin</a>
+        </div>
+      </div>
+      <div class="credit">copy right @ 2023 by <a
+        class="twitter-link"
+        target="_blank"
+        href="https://twitter.com/__emkayy_"
+        >emkayy 😎</a>
+      </div>
+  </body>
+</html>

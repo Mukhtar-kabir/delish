@@ -16,7 +16,8 @@
     />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
+    <script defer src="dist/data.js"></script>
+    <script defer src="dist/script.js"></script>
   </head>
   <body>
     <header>
@@ -37,7 +38,9 @@
       <div class="icons">
         <i class="fas fa-search" id="search-icon"></i>
         <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"
+          ><span class="notify">0</span></a
+        >
         <i class="fas fa-bars" id="menu-bars"></i>
       </div>
     </header>
@@ -110,11 +113,12 @@
       <h1 class="heading">popular dishes</h1>
 
       <div class="box-container">
-        <div class="box">
+        <div class="dish-container">
+          <!-- <div class="box">
           <a href="#" class="fas fa-heart"></a>
           <a href="#" class="fas fa-eye"></a>
           <img src="./src/pic-1.PNG" alt="" />
-          <h3>testy food</h3>
+          <h3>burger</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -123,15 +127,15 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
           </div>
-          <span>$15.99</span>
-          <a href="#" class="btn">add to cart</a>
+          <span>$5.99</span>
+          <a href="#" class="btn" id="btn">add to cart</a>
         </div>
 
         <div class="box">
           <a href="#" class="fas fa-heart"></a>
           <a href="#" class="fas fa-eye"></a>
           <img src="./src/pic-2.PNG" alt="" />
-          <h3>testy food</h3>
+          <h3>noodles</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -140,15 +144,15 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
           </div>
-          <span>$15.99</span>
-          <a href="#" class="btn">add to cart</a>
+          <span>$3.99</span>
+          <a href="#" class="btn" id="btn">add to cart</a>
         </div>
 
         <div class="box">
           <a href="#" class="fas fa-heart"></a>
           <a href="#" class="fas fa-eye"></a>
           <img src="./src/pic-3.PNG" alt="" />
-          <h3>testy food</h3>
+          <h3>pizza</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -157,15 +161,15 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
           </div>
-          <span>$15.99</span>
-          <a href="#" class="btn">add to cart</a>
+          <span>$6.99</span>
+          <a href="#" class="btn" id="btn">add to cart</a>
         </div>
 
         <div class="box">
           <a href="#" class="fas fa-heart"></a>
           <a href="#" class="fas fa-eye"></a>
           <img src="./src/pic-4.PNG" alt="" />
-          <h3>testy food</h3>
+          <h3>pizza</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -174,15 +178,15 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
           </div>
-          <span>$15.99</span>
-          <a href="#" class="btn">add to cart</a>
+          <span>$4.99</span>
+          <a href="#" class="btn" id="btn">add to cart</a>
         </div>
 
         <div class="box">
           <a href="#" class="fas fa-heart"></a>
           <a href="#" class="fas fa-eye"></a>
           <img src="./src/pic-5.PNG" alt="" />
-          <h3>testy food</h3>
+          <h3>burger</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -190,15 +194,15 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
           </div>
-          <span>$15.99</span>
-          <a href="#" class="btn">add to cart</a>
+          <span>$7.99</span>
+          <a href="#" class="btn" id="btn">add to cart</a>
         </div>
 
         <div class="box">
           <a href="#" class="fas fa-heart"></a>
           <a href="#" class="fas fa-eye"></a>
           <img src="./src/pic-6.PNG" alt="" />
-          <h3>testy food</h3>
+          <h3>sandwich</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -207,8 +211,9 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
           </div>
-          <span>$15.99</span>
-          <a href="#" class="btn">add to cart</a>
+          <span>$8.99</span>
+          <a href="#" class="btn" id="btn">add to cart</a>
+        </div> -->
         </div>
       </div>
     </section>
@@ -279,7 +284,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
               temporibus.
             </p>
-            <a href="#" class="btn">add to cart</a>
+            <a href="#" class="btn" id="btn">add to cart</a>
             <span class="price">$12.99</span>
           </div>
         </div>
@@ -302,7 +307,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
               temporibus.
             </p>
-            <a href="#" class="btn">add to cart</a>
+            <a href="#" class="btn" id="btn">add to cart</a>
             <span class="price">$12.99</span>
           </div>
         </div>
@@ -325,7 +330,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
               temporibus.
             </p>
-            <a href="#" class="btn">add to cart</a>
+            <a href="#" class="btn" id="btn">add to cart</a>
             <span class="price">$12.99</span>
           </div>
         </div>
@@ -348,7 +353,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
               temporibus.
             </p>
-            <a href="#" class="btn">add to cart</a>
+            <a href="#" class="btn" id="btn">add to cart</a>
             <span class="price">$12.99</span>
           </div>
         </div>
@@ -371,7 +376,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
               temporibus.
             </p>
-            <a href="#" class="btn">add to cart</a>
+            <a href="#" class="btn" id="btn">add to cart</a>
             <span class="price">$12.99</span>
           </div>
         </div>
@@ -394,7 +399,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
               temporibus.
             </p>
-            <a href="#" class="btn">add to cart</a>
+            <a href="#" class="btn" id="btn">add to cart</a>
             <span class="price">$12.99</span>
           </div>
         </div>
@@ -417,7 +422,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
               temporibus.
             </p>
-            <a href="#" class="btn">add to cart</a>
+            <a href="#" class="btn" id="btn">add to cart</a>
             <span class="price">$12.99</span>
           </div>
         </div>
@@ -440,7 +445,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
               temporibus.
             </p>
-            <a href="#" class="btn">add to cart</a>
+            <a href="#" class="btn" id="btn">add to cart</a>
             <span class="price">$12.99</span>
           </div>
         </div>
@@ -463,7 +468,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
               temporibus.
             </p>
-            <a href="#" class="btn">add to cart</a>
+            <a href="#" class="btn" id="btn">add to cart</a>
             <span class="price">$12.99</span>
           </div>
         </div>
@@ -622,37 +627,41 @@
       <h3 class="sub-heading">order now</h3>
       <h1 class="heading">free and fast</h1>
 
-      <form action="">
+      <form action="https://formspree.io/f/xwkjgeqn" method="post">
         <div class="inputBox">
           <div class="input">
             <span>your name</span>
-            <input type="text" placeholder="enter your name" />
+            <input type="text" name="name" placeholder="enter your name" />
           </div>
           <div class="input">
             <span>your number</span>
-            <input type="number" placeholder="enter your number" />
+            <input
+              type="number"
+              name="number"
+              placeholder="enter your number"
+            />
           </div>
         </div>
 
         <div class="inputBox">
           <div class="input">
             <span>your order</span>
-            <input type="text" placeholder="enter food name" />
+            <input type="text" name="name" placeholder="enter food name" />
           </div>
           <div class="input">
             <span>additional food</span>
-            <input type="text" placeholder="extra with food" />
+            <input type="text" name="name" placeholder="extra with food" />
           </div>
         </div>
 
         <div class="inputBox">
           <div class="input">
             <span>how much</span>
-            <input type="number" placeholder="how much orders" />
+            <input type="number" name="number" placeholder="how much orders" />
           </div>
           <div class="input">
             <span>date and time</span>
-            <input type="datetime-local" />
+            <input type="datetime-local" name="datetime-local" />
           </div>
         </div>
 
@@ -660,7 +669,7 @@
           <div class="input">
             <span>your address</span>
             <textarea
-              name=""
+              name="name"
               placeholder="enter your address"
               id=""
               cols="30"
@@ -670,7 +679,7 @@
           <div class="input">
             <span>your message</span>
             <textarea
-              name=""
+              name="message"
               placeholder="enter your message"
               id=""
               cols="30"
@@ -678,7 +687,7 @@
             ></textarea>
           </div>
         </div>
-        <input type="submit" value="order now" class="btn--btn" />
+        <input type="submit" name="submit" value="order now" class="btn--btn" />
       </form>
     </section>
 
@@ -720,11 +729,15 @@
           <a href="#">linkedin</a>
         </div>
       </div>
-      <div class="credit">copy right @ 2023 by <a
-        class="twitter-link"
-        target="_blank"
-        href="https://twitter.com/__emkayy_"
-        >emkayy 😎</a></div>
+      <div class="credit">
+        copy right @ 2023 by
+        <a
+          class="twitter-link"
+          target="_blank"
+          href="https://twitter.com/__emkayy_"
+          >emkayy 😎</a
+        >
+      </div>
     </section>
 
     <div class="loader-container">
