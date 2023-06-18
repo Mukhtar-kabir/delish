@@ -77,14 +77,23 @@ var swiper = new Swiper('.review-slider', {
 });
 
 function loader() {
-  document.querySelector('.loader-container').classList.add('fade-out')
+  document.querySelector('.loader-container').classList.add('fade-out');
 }
 
 function fadeOut() {
-  setInterval(loader, 3000)
+  setInterval(loader, 3000);
 }
 
 window.onload = fadeOut;
+
+// const btnBtn = document.querySelector('.btn--btn');
+// const input = getElementById('#input');
+
+// btnBtn.addEventListener('click', function (e) {
+//   e, preventDefault();
+
+//   input.value = '';
+// });
 
 const dish = document.querySelector('.box-container');
 
