@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dishes</title>
+    <link rel="icon" href="./src/logo.PNG" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <script defer src="./dist/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">
+        <img src="./src/logo.PNG" alt="LOGO" />
+        <h1>Delish</h1>
+      </a>
+
+      <nav class="navbar">
+        <a class="nav--link active" href="#home">Home</a>
+        <a href="./dishes.html" class="nav--link">Dishes</a>
+        <a href="#about" class="nav--link">about</a>
+        <a href="#menu" class="nav--link">menu</a>
+        <a href="#review" class="nav--link">review</a>
+        <a href="#order" class="nav--link">order</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-search" id="search-icon"></i>
+        <a href="#" class="fas fa-heart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"
+          ><span class="notify">0</span></a
+        >
+        <i class="fas fa-bars" id="menu-bars"></i>
+      </div>
+    </header>
+
+    <form action="" id="search-form">
+      <input
+        type="search"
+        placeholder="search here..."
+        name=""
+        id="search-box"
+      />
+      <label for="search-box" class="fa fa-search"></label>
+      <i class="fa fa-times" id="close"></i>
+    </form>
+
+    <section class="menu" id="menu">
+      <h3 class="sub-heading">our menu</h3>
+      <h1 class="heading">today's speciality</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img src="./src/menu-img-1.PNG" alt="" />
+            <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>french fries</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+              temporibus.
+            </p>
+            <a href="#" class="btn" id="btn">add to cart</a>
+            <span class="price">$12.99</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="./src/menu-img-2.PNG" alt="" />
+            <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>crispy chicken burger</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+              temporibus.
+            </p>
+            <a href="#" class="btn" id="btn">add to cart</a>
+            <span class="price">$12.99</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="./src/menu-img-3.PNG" alt="" />
+            <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>fried chicken</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+              temporibus.
+            </p>
+            <a href="#" class="btn" id="btn">add to cart</a>
+            <span class="price">$12.99</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="./src/menu-img-4.PNG" alt="" />
+            <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>shawarma chicken</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+              temporibus.
+            </p>
+            <a href="#" class="btn" id="btn">add to cart</a>
+            <span class="price">$12.99</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="./src/menu-img-5.PNG" alt="" />
+            <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>homemade chips</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+              temporibus.
+            </p>
+            <a href="#" class="btn" id="btn">add to cart</a>
+            <span class="price">$12.99</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="./src/menu-img-6.PNG" alt="" />
+            <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>barbecued meat</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+              temporibus.
+            </p>
+            <a href="#" class="btn" id="btn">add to cart</a>
+            <span class="price">$12.99</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="./src/menu-img-7.PNG" alt="" />
+            <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>thai stir-fried rice noodles</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+              temporibus.
+            </p>
+            <a href="#" class="btn" id="btn">add to cart</a>
+            <span class="price">$12.99</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="./src/menu-img-8.PNG" alt="" />
+            <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>fried chickken</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+              temporibus.
+            </p>
+            <a href="#" class="btn" id="btn">add to cart</a>
+            <span class="price">$12.99</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="./src/menu-img-9.PNG" alt="" />
+            <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>beef shawarma</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+              temporibus.
+            </p>
+            <a href="#" class="btn" id="btn">add to cart</a>
+            <span class="price">$12.99</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+        <div class="box-container">
+          <div class="box">
+            <h3>locations</h3>
+            <a href="#">Nigeria</a>
+            <a href="#">Ghana</a>
+            <a href="#">Libya</a>
+            <a href="#">Togo</a>
+            <a href="#">Camero</a>
+            <a href="#">Mali</a>
+          </div>
+  
+          <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">dishes</a>
+            <a href="#">about</a>
+            <a href="#">menu</a>
+            <a href="#">review</a>
+            <a href="#">order</a>
+          </div>
+  
+          <div class="box">
+            <h3>contact info</h3>
+            <a href="#">+234-813-183-9432</a>
+            <a href="#">+245-678-6878</a>
+            <a href="#">delish@gmail.com</a>
+            <a href="#">Lagos, Nigeria - 53698</a>
+          </div>
+  
+          <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">twitter</a>
+            <a href="#">instagram</a>
+            <a href="#">linkedin</a>
+          </div>
+        </div>
+        <div class="credit">
+          copy right @ 2023 by
+          <a
+            class="twitter-link"
+            target="_blank"
+            href="https://twitter.com/__emkayy_"
+            >emkayy 😎</a
+          >
+        </div>
+      </section>
+  </body>
+</html>

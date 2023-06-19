@@ -215,45 +215,6 @@ header .icons a:hover span {
   }
 }
 
-/* @media (max-width: 900px) {
-  header .icons #menu-bars {
-    display: inline-block;
-  }
-
-  header .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #fff;
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-
-  header .navbar.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  }
-
-  header .navbar a {
-    display: block;
-    padding: 1.5rem;
-    margin: 1rem;
-    font-size: 2rem;
-    background: #eee;
-  }
-
-  #search-form #search-box {
-    width: 90%;
-    margin: 0 1rem;
-  }
-
-  .home .home-slider .slide .content h3 {
-    font-size: 5rem;
-  }
-} */
-
 /* Searc form */
 
 #search-form {
@@ -332,6 +293,7 @@ header .icons a:hover span {
 
 .swiper-container {
   width: 100%;
+  height: 100%;
 }
 
 .swiper-slide {
@@ -342,16 +304,6 @@ header .icons a:hover span {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-
-/* .home .home-slider .slide {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding-top: 7rem;
-  width: 100%;
-  overflow-x: hidden;
-} */
 
 .home .home-slider .slide .content {
   flex: 1 1 45rem;
@@ -384,10 +336,6 @@ header .icons a:hover span {
   padding: 0.5rem 0;
   line-height: 1.5;
 }
-
-/* .swiper-pagination-bullet-active {
-  background: #f1b23b;
-} */
 
 @media (max-width: 900px) {
   .swiper-slide {
@@ -668,6 +616,10 @@ header .icons a:hover span {
 }
 
 /* Menu */
+
+.menu {
+  margin-top: 5rem;
+}
 
 .menu .box-container {
   display: grid;
@@ -1086,12 +1038,18 @@ header .icons a:hover span {
   font-size: 2.5rem;
 }
 
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
 .btn--buttons {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: 3rem;
 }
 
 .btn--buttons h3 {
@@ -1178,7 +1136,7 @@ header .icons a:hover span {
   }
 }
 
-.fade-out {
+/* .fade-out {
   top: 110%;
   opacity: 0;
-}
+} */
