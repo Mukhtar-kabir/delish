@@ -21,6 +21,7 @@ html {
 
 section {
   padding: 2rem 9%;
+
   /* padding: 2rem 5.2%; */
 }
 
@@ -106,8 +107,8 @@ header .navbar a:hover {
   background-color: #f1b23b;
 }
 
-header .icons i,
-header .icons a {
+header .icons a, 
+header .icons i {
   cursor: pointer;
   margin-left: 0.5rem;
   height: 4.5rem;
