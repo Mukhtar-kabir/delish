@@ -1,5 +1,3 @@
-'use strict';
-
 const menu = document.querySelector('#menu-bars');
 const navbar = document.querySelector('.navbar');
 const navLink = document.querySelector('.nav--link');
@@ -17,16 +15,14 @@ document.querySelector('#close').onclick = () => {
   document.querySelector('#search-form').classList.remove('active');
 };
 
-document.querySelectorAll('.nav--link').forEach((el) =>
-  el.addEventListener('click', () => {
-    menu.classList.remove('active');
-    navbar.classList.remove('active');
-    menu.classList.remove('fa-times');
-  })
-);
+document.querySelectorAll('.nav--link').forEach((el) => el.addEventListener('click', () => {
+  menu.classList.remove('active');
+  navbar.classList.remove('active');
+  menu.classList.remove('fa-times');
+}));
 
 const scrollView = function () {
-  navLink.addEventListener('click', function (e) {
+  navLink.addEventListener('click', (e) => {
     e.preventDefault();
     console.log('LINK');
 
@@ -43,19 +39,19 @@ const label = document.querySelector('.label');
 
 let basket = JSON.parse(localStorage.getItem('data')) || [];
 
-let calculate = () => {
-  let cartIcon = document.querySelector('.notify');
+const calculate = () => {
+  const cartIcon = document.querySelector('.notify');
   cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
 };
 
 calculate();
 
-let generateCartItems = () => {
+const generateCartItems = () => {
   if (basket.length !== 0) {
     return (shoppingCart.innerHTML = basket.map((x) => {
-      let { id, item } = x;
-      let search = shopItemData.find((x) => x.id === id) || [];
-      let { img, price, name } = search;
+      const { id, item } = x;
+      const search = shopItemData.find((x) => x.id === id) || [];
+      const { img, price, name } = search;
 
       return `
         <div class="container">
@@ -91,9 +87,9 @@ let generateCartItems = () => {
         </div>
       `;
     })).join('');
-  } else {
-    shoppingCart.innerHTML = '';
-    label.innerHTML = `
+  }
+  shoppingCart.innerHTML = '';
+  label.innerHTML = `
       <div class="text">
       <h3>Cart is Empty</h3>
       <a href="index.html">
@@ -101,14 +97,13 @@ let generateCartItems = () => {
       </a>
       </div>
     `;
-  }
 };
 
 generateCartItems();
 
-let increament = (id) => {
-  let selectedItem = id;
-  let search = basket.find((x) => x.id === selectedItem.id);
+const increament = (id) => {
+  const selectedItem = id;
+  const search = basket.find((x) => x.id === selectedItem.id);
 
   if (search === undefined) {
     basket.push({
@@ -124,31 +119,30 @@ let increament = (id) => {
   localStorage.setItem('data', JSON.stringify(basket));
 };
 
-let decreament = (id) => {
-  let selectedItem = id;
-  let search = basket.find((x) => x.id === selectedItem.id);
+const decreament = (id) => {
+  const selectedItem = id;
+  const search = basket.find((x) => x.id === selectedItem.id);
 
   if (search === undefined) return;
-  else if (search.item === 0) return;
-  else {
-    search.item -= 1;
-  }
+  if (search.item === 0) return;
+
+  search.item -= 1;
 
   update(selectedItem.id);
   basket = basket.filter((x) => x.item !== 0);
-  generateCartItems()
+  generateCartItems();
   localStorage.setItem('data', JSON.stringify(basket));
 };
 
 let update = (id) => {
-  let search = basket.find((x) => x.id === id);
+  const search = basket.find((x) => x.id === id);
   document.getElementById(id).innerHTML = search.item;
   calculate();
-  totalAmount()
+  totalAmount();
 };
 
-let removeItem = (id) => {
-  let selectedItem = id;
+const removeItem = (id) => {
+  const selectedItem = id;
   basket = basket.filter((x) => x.id !== selectedItem.id);
   calculate();
   generateCartItems();
@@ -158,10 +152,10 @@ let removeItem = (id) => {
 
 let totalAmount = () => {
   if (basket.length !== 0) {
-    let amount = basket
+    const amount = basket
       .map((x) => {
-        let { id, item } = x;
-        let filterData = shopItemData.find((x) => x.id === id);
+        const { id, item } = x;
+        const filterData = shopItemData.find((x) => x.id === id);
         return filterData.price * item;
       })
       .reduce((x, y) => x + y, 0);
@@ -174,12 +168,12 @@ let totalAmount = () => {
           </div>
         </div>
     `);
-  } else return;
+  }
 };
 
 totalAmount();
 
-let clearCart = () => {
+const clearCart = () => {
   basket = [];
   generateCartItems();
   calculate();

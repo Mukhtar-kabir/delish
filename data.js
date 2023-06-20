@@ -1,6 +1,4 @@
-'use strict';
-
-let shopItemData = [
+const shopItemData = [
   {
     name: 'Burger',
     price: 5,
