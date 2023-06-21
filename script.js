@@ -15,11 +15,13 @@ document.querySelector('#close').onclick = () => {
   document.querySelector('#search-form').classList.remove('active');
 };
 
-document.querySelectorAll('.nav--link').forEach((el) => el.addEventListener('click', () => {
-  menu.classList.remove('active');
-  navbar.classList.remove('active');
-  menu.classList.remove('fa-times');
-}));
+document.querySelectorAll('.nav--link').forEach((el) =>
+  el.addEventListener('click', () => {
+    menu.classList.remove('active');
+    navbar.classList.remove('active');
+    menu.classList.remove('fa-times');
+  })
+);
 
 const scrollView = function () {
   navLink.addEventListener('click', (e) => {
@@ -34,7 +36,7 @@ const scrollView = function () {
 };
 scrollView();
 
-var swiper = new Swiper('.home-slider', {
+let swiper = new Swiper('.home-slider', {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
@@ -48,7 +50,7 @@ var swiper = new Swiper('.home-slider', {
   loop: true,
 });
 
-var swiper = new Swiper('.review-slider', {
+new Swiper('.review-slider', {
   spaceBetween: 20,
   centeredSlides: true,
   autoplay: {
@@ -86,12 +88,11 @@ const dish = document.querySelector('.box-container');
 
 let basket = JSON.parse(localStorage.getItem('data')) || [];
 
-const generateShop = () => (dish.innerHTML = shopItemData.map((x) => {
-  const {
-    id, name, price, img,
-  } = x;
-  const search = basket.find((y) => y.id === id) || [];
-  return `
+const generateShop = () =>
+  (dish.innerHTML = shopItemData.map((x) => {
+    const { id, name, price, img } = x;
+    const search = basket.find((y) => y.id === id) || [];
+    return `
       <div class="dish-container">
         <div class="box">
           <a href="#" class="fas fa-heart"></a>
@@ -114,8 +115,8 @@ const generateShop = () => (dish.innerHTML = shopItemData.map((x) => {
             </svg>
 
             <h3 id=${id} class="quantity">${
-    search.item === undefined ? 0 : search.item
-  }</h3>
+      search.item === undefined ? 0 : search.item
+    }</h3>
 
             <svg onclick="increament(${id})" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
@@ -124,9 +125,20 @@ const generateShop = () => (dish.innerHTML = shopItemData.map((x) => {
         </div>
       </div>
     `;
-})).join('');
+  })).join('');
 
 generateShop();
+
+const calculate = () => {
+  const cartIcon = document.querySelector('.notify');
+  cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
+};
+
+const update = (id) => {
+  const search = basket.find((x) => x.id === id);
+  document.getElementById(id).innerHTML = search.item;
+  calculate();
+};
 
 const increament = (id) => {
   const selectedItem = id;
@@ -159,17 +171,6 @@ const decreament = (id) => {
   basket = basket.filter((x) => x.item !== 0);
   console.log(basket);
   localStorage.setItem('data', JSON.stringify(basket));
-};
-
-let update = (id) => {
-  const search = basket.find((x) => x.id === id);
-  document.getElementById(id).innerHTML = search.item;
-  calculate();
-};
-
-let calculate = () => {
-  const cartIcon = document.querySelector('.notify');
-  cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
 };
 
 calculate();
