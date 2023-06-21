@@ -1137,7 +1137,7 @@ header .icons a:hover span {
   }
 }
 
-/* .fade-out {
+.fade-out {
   top: 110%;
   opacity: 0;
-} */
+}
