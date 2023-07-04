@@ -1,5 +1,3 @@
-'use strict';
-
 const menu = document.querySelector('#menu-bars');
 const navbar = document.querySelector('.navbar');
 const navLink = document.querySelector('.nav--link');
@@ -16,13 +14,12 @@ document.querySelector('#search-icon').onclick = () => {
 document.querySelector('#close').onclick = () => {
   document.querySelector('#search-form').classList.remove('active');
 };
-
 document.querySelectorAll('.nav--link').forEach((el) =>
   el.addEventListener('click', () => {
     menu.classList.remove('active');
     navbar.classList.remove('active');
     menu.classList.remove('fa-times');
-  }
+  })
 );
 
 const scrollView = function () {
@@ -56,7 +53,7 @@ new Swiper('.review-slider', {
   centeredSlides: true,
   autoplay: {
     delay: 2500,
-    disableOnInteraction: false,
+    // disableOnInteraction: false,
   },
   loop: true,
   breakpoints: {
@@ -172,5 +169,5 @@ const decreament = (id) => {
   console.log(basket);
   localStorage.setItem('data', JSON.stringify(basket));
 };
-
+ 
 calculate();

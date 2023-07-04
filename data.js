@@ -1,5 +1,3 @@
-'use strict';
-
 const shopItemData = [
   {
     name: 'Burger',
