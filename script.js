@@ -1,5 +1,3 @@
-'use strict';
-
 const menu = document.querySelector('#menu-bars');
 const navbar = document.querySelector('.navbar');
 const navLink = document.querySelector('.nav--link');
