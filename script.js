@@ -20,7 +20,7 @@ document.querySelectorAll('.nav--link').forEach((el) =>
     menu.classList.remove('active');
     navbar.classList.remove('active');
     menu.classList.remove('fa-times');
-  })
+  });
 );
 
 const scrollView = function () {
@@ -76,11 +76,11 @@ new Swiper('.review-slider', {
 
 function loader() {
   document.querySelector('.loader-container').classList.add('fade-out');
-}
+};
 
 function fadeOut() {
   setInterval(loader, 3000);
-}
+};
 
 window.onload = fadeOut;
 
@@ -153,7 +153,6 @@ const increament = (id) => {
     search.item += 1;
   }
 
-  console.log(basket);
   update(selectedItem.id);
   localStorage.setItem('data', JSON.stringify(basket));
 };
