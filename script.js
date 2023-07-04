@@ -15,13 +15,21 @@ document.querySelector('#close').onclick = () => {
   document.querySelector('#search-form').classList.remove('active');
 };
 
-document.querySelectorAll('.nav--link').forEach((el) =>
+// document.querySelectorAll('.nav--link').forEach((el) =>
+//   el.addEventListener('click', () => {
+//     menu.classList.remove('active');
+//     navbar.classList.remove('active');
+//     menu.classList.remove('fa-times');
+//   });
+// );
+
+document.querySelectorAll('.nav--link').forEach((el) => {
   el.addEventListener('click', () => {
     menu.classList.remove('active');
     navbar.classList.remove('active');
     menu.classList.remove('fa-times');
   });
-);
+});
 
 const scrollView = function () {
   navLink.addEventListener('click', (e) => {
@@ -76,11 +84,11 @@ new Swiper('.review-slider', {
 
 function loader() {
   document.querySelector('.loader-container').classList.add('fade-out');
-};
+}
 
 function fadeOut() {
   setInterval(loader, 3000);
-};
+}
 
 window.onload = fadeOut;
 
