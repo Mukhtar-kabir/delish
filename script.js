@@ -173,4 +173,4 @@ const decreament = (id) => {
   localStorage.setItem('data', JSON.stringify(basket));
 };
  
-calculate()
+calculate();
