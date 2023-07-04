@@ -15,21 +15,13 @@ document.querySelector('#close').onclick = () => {
   document.querySelector('#search-form').classList.remove('active');
 };
 
-// document.querySelectorAll('.nav--link').forEach((el) =>
-//   el.addEventListener('click', () => {
-//     menu.classList.remove('active');
-//     navbar.classList.remove('active');
-//     menu.classList.remove('fa-times');
-//   });
-// );
-
-document.querySelectorAll('.nav--link').forEach((el) => {
+document.querySelectorAll('.nav--link').forEach((el) =>
   el.addEventListener('click', () => {
     menu.classList.remove('active');
     navbar.classList.remove('active');
     menu.classList.remove('fa-times');
-  });
-});
+  })
+);
 
 const scrollView = function () {
   navLink.addEventListener('click', (e) => {
